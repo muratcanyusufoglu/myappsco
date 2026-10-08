@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyApps Studio | AI-Powered Mobile Ecosystem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        studio: { 500: '#3b82f6', 600: '#2563eb' },
+                        dark: '#0a0a0a'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; }
+        .glass-panel {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .image-mask {
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+        }
+    </style>
+</head>
+<body class="text-slate-200 font-sans antialiased selection:bg-studio-500 selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-white text-black flex items-center justify-center font-black text-xl">M</div>
+                <span class="text-lg font-bold tracking-tight text-white">MyApps Studio</span>
+            </div>
+            <a href="mailto:contact@myappsco.online" class="text-xs font-semibold px-5 py-2 rounded-full bg-white text-black hover:bg-slate-200 transition">
+                Contact Studio
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-studio-600/20 via-dark to-dark -z-10"></div>
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-slate-300">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                Actively scaling with Claude AI
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
+                Intelligent Mobile <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-studio-500 to-purple-500">Experiences</span>
+            </h1>
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
+                An independent mobile engineering studio integrating Generative AI, privacy-first data architecture, and offline-capable utilities for a global audience.
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Grid (Görsel Odaklı Yapı) -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <h2 class="text-2xl font-bold text-white mb-10 flex items-center gap-4">
+            Our Ecosystem
+            <span class="h-px bg-white/10 flex-1"></span>
+        </h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- APP 1: HairOn AI -->
+            <a href="https://apps.apple.com/us/app/hairon-ai-hairstyle-try-on/id6502830882" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-studio-500/50 transition duration-300">
+                <div class="relative h-56 overflow-hidden bg-slate-900">
+                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
+                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="HairOn AI Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-4 left-4 px-3 py-1 bg-purple-500/20 backdrop-blur-md border border-purple-500/30 rounded-full text-[10px] font-bold text-purple-300 uppercase tracking-wide">
+                        Flagship AI Model
+                    </div>
+                </div>
+                <div class="p-6 pt-2">
+                    <h3 class="text-xl font-bold text-white mb-2">HairOn AI</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        Hyper-realistic virtual hairstyle and color simulator powered by custom vision models and facial mapping technology.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Generative AI</span>
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">iOS & Android</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- APP 2: Aurora -->
+            <a href="https://apps.apple.com/us/app/aurora-quotes-affirmations/id6478839088" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-orange-500/50 transition duration-300">
+                <div class="relative h-56 overflow-hidden bg-slate-900">
+                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
+                    <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80" alt="Aurora App Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 pt-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Aurora: Quotes</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        Personalized daily motivation engine. Features smart widgets, localized translations, and AI-driven mood adaptive content.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Wellness</span>
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">React Native</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- APP 3: OneLine -->
+            <a href="#" class="group block glass-panel rounded-3xl overflow-hidden hover:border-emerald-500/50 transition duration-300">
+                <div class="relative h-56 overflow-hidden bg-slate-900">
+                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
+                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80" alt="OneLine App Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 pt-2">
+                    <h3 class="text-xl font-bold text-white mb-2">OneLine Journal</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        Minimalist, offline-first daily micro-journaling app. Built on SQLite for absolute data privacy and rapid local performance.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Privacy-First</span>
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">SQLite</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- APP 4: Who's Imposter -->
+            <a href="https://apps.apple.com/us/app/whos-imposter-party-games/id6466736412" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-red-500/50 transition duration-300">
+                <div class="relative h-56 overflow-hidden bg-slate-900">
+                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
+                    <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=800&q=80" alt="Who's Imposter Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 pt-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Who's Imposter?</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        Local multiplayer social deduction game. Pass-and-play mechanics designed for social gatherings and tabletop dynamics.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Social Gaming</span>
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Multiplayer</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- APP 5: Intervl -->
+            <a href="#" class="group block glass-panel rounded-3xl overflow-hidden hover:border-blue-500/50 transition duration-300">
+                <div class="relative h-56 overflow-hidden bg-slate-900">
+                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Intervl Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 pt-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Intervl</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        Precision fitness interval timer for high-intensity training. Features custom audio cues and background execution.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Utility</span>
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Health & Fitness</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- APP 6: Name Generator -->
+            <a href="#" class="group block glass-panel rounded-3xl overflow-hidden hover:border-yellow-500/50 transition duration-300">
+                <div class="relative h-56 overflow-hidden bg-slate-900">
+                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
+                    <img src="https://images.unsplash.com/photo-1516222338250-863216ce01ea?auto=format&fit=crop&w=800&q=80" alt="Name Generator Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6 pt-2">
+                    <h3 class="text-xl font-bold text-white mb-2">Name Generator</h3>
+                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
+                        Algorithmic naming engine supporting 16+ localized languages. Utilized for brand creation, character naming, and brainstorming.
+                    </p>
+                    <div class="flex gap-2">
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Productivity</span>
+                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Multilingual</span>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Engineering & AI Section (Anthropic Başvurusu İçin Kritik Odak) -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="glass-panel rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-t from-studio-900/20 to-transparent"></div>
+            <h2 class="text-3xl font-extrabold text-white mb-6">Our Tech & AI Integration Strategy</h2>
+            <p class="text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+                We are transitioning our core logic from static algorithms to dynamic Large Language Models. By leveraging <strong>Claude's API</strong>, we aim to enhance <em>HairOn AI's</em> style recommendation engine, introduce dynamic contextual analysis in <em>OneLine</em>, and optimize multilingual generation models.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
+                <div class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white">React Native (Expo)</div>
+                <div class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white">TypeScript</div>
+                <div class="px-5 py-2.5 rounded-xl bg-studio-500/20 border border-studio-500/30 text-studio-300">Claude LLMs</div>
+                <div class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white">Offline SQLite</div>
+                <div class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white">NestJS & GraphQL</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 mt-12 py-8 text-center text-sm text-slate-500">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://apps.apple.com/us/developer/muratcan-yusufoglu/id1682346986" target="_blank" class="hover:text-white transition">App Store Developer Profile</a>
+            <a href="mailto:contact@myappsco.online" class="hover:text-white transition">contact@myappsco.online</a>
+        </div>
+        <p>© 2026 MyApps Studio. Independently engineered.</p>
+    </footer>
+
+</body>
+</html>
