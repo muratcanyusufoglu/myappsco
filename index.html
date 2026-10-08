@@ -29,6 +29,8 @@
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
         }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="text-slate-200 font-sans antialiased selection:bg-studio-500 selection:text-white">
@@ -64,7 +66,7 @@
         </div>
     </section>
 
-    <!-- Products Grid (Görsel Odaklı Yapı) -->
+    <!-- Products Grid -->
     <section class="max-w-7xl mx-auto px-6 py-12">
         <h2 class="text-2xl font-bold text-white mb-10 flex items-center gap-4">
             Our Ecosystem
@@ -73,23 +75,29 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             
-            <!-- APP 1: HairOn AI -->
-            <a href="https://apps.apple.com/us/app/hairon-ai-hairstyle-try-on/id6502830882" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-studio-500/50 transition duration-300">
-                <div class="relative h-56 overflow-hidden bg-slate-900">
-                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="HairOn AI Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
-                    <div class="absolute top-4 left-4 px-3 py-1 bg-purple-500/20 backdrop-blur-md border border-purple-500/30 rounded-full text-[10px] font-bold text-purple-300 uppercase tracking-wide">
-                        Flagship AI Model
+            <!-- APP 1: HairOn AI (Amiral Gemisi - Tam Genişlik) -->
+            <a href="https://apps.apple.com/us/app/hairon-ai-hairstyle-try-on/id6502830882" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-purple-500/50 transition duration-300 md:col-span-2 lg:col-span-3">
+                <div class="p-8 flex flex-col md:flex-row gap-8 items-center bg-gradient-to-br from-slate-900 to-slate-950">
+                    <div class="flex-1 space-y-4">
+                        <div class="inline-flex px-3 py-1 bg-purple-500/20 backdrop-blur-md border border-purple-500/30 rounded-full text-[10px] font-bold text-purple-300 uppercase tracking-wide mb-2">
+                            Flagship AI Model
+                        </div>
+                        <h3 class="text-3xl font-extrabold text-white mb-2">HairOn AI</h3>
+                        <p class="text-base text-slate-400 leading-relaxed max-w-md">
+                            Hyper-realistic virtual hairstyle and color simulator powered by custom vision models and facial mapping technology.
+                        </p>
+                        <div class="flex gap-2 pt-2">
+                            <span class="text-xs px-3 py-1.5 bg-white/5 border border-white/10 rounded-md text-slate-300">Generative AI</span>
+                            <span class="text-xs px-3 py-1.5 bg-white/5 border border-white/10 rounded-md text-slate-300">iOS & Android</span>
+                        </div>
                     </div>
-                </div>
-                <div class="p-6 pt-2">
-                    <h3 class="text-xl font-bold text-white mb-2">HairOn AI</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        Hyper-realistic virtual hairstyle and color simulator powered by custom vision models and facial mapping technology.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Generative AI</span>
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">iOS & Android</span>
+                    
+                    <!-- Dinamik Ekran Görüntüsü Galerisi -->
+                    <div class="flex-1 w-full flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar py-4 md:py-0">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/dc/e4/9ddce418-7e83-58ca-2717-c34f08b165bd/01-try-on-f.png/460x996bb.webp" alt="HairOn Try On" class="h-72 w-auto rounded-2xl object-contain snap-center border border-white/10 shadow-2xl shadow-purple-900/20 group-hover:-translate-y-1 transition duration-300">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/80/f0/90/80f090d8-0a4d-ea0e-81e5-38b7fe4e8a10/02-before-after-f.png/460x996bb.webp" alt="HairOn Before After" class="h-72 w-auto rounded-2xl object-contain snap-center border border-white/10 shadow-2xl shadow-purple-900/20 group-hover:-translate-y-1 transition duration-300 delay-75">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ce/4d/d0/ce4dd032-5610-318e-3ec3-2dc979b9cae5/11-home-f.png/460x996bb.webp" alt="HairOn Home" class="h-72 w-auto rounded-2xl object-contain snap-center border border-white/10 shadow-2xl shadow-purple-900/20 group-hover:-translate-y-1 transition duration-300 delay-150">
+                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a1/b2/db/a1b2db02-70d2-a26a-7141-b7113497cf9c/09-skin-retouch-f.png/460x996bb.webp" alt="HairOn Skin Retouch" class="h-72 w-auto rounded-2xl object-contain snap-center border border-white/10 shadow-2xl shadow-purple-900/20 group-hover:-translate-y-1 transition duration-300 delay-200">
                     </div>
                 </div>
             </a>
@@ -97,7 +105,6 @@
             <!-- APP 2: Aurora -->
             <a href="https://apps.apple.com/us/app/aurora-quotes-affirmations/id6478839088" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-orange-500/50 transition duration-300">
                 <div class="relative h-56 overflow-hidden bg-slate-900">
-                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
                     <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80" alt="Aurora App Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="p-6 pt-2">
@@ -115,7 +122,6 @@
             <!-- APP 3: OneLine -->
             <a href="#" class="group block glass-panel rounded-3xl overflow-hidden hover:border-emerald-500/50 transition duration-300">
                 <div class="relative h-56 overflow-hidden bg-slate-900">
-                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
                     <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80" alt="OneLine App Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="p-6 pt-2">
@@ -133,7 +139,6 @@
             <!-- APP 4: Who's Imposter -->
             <a href="https://apps.apple.com/us/app/whos-imposter-party-games/id6466736412" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-red-500/50 transition duration-300">
                 <div class="relative h-56 overflow-hidden bg-slate-900">
-                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
                     <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=800&q=80" alt="Who's Imposter Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="p-6 pt-2">
@@ -148,46 +153,10 @@
                 </div>
             </a>
 
-            <!-- APP 5: Intervl -->
-            <a href="#" class="group block glass-panel rounded-3xl overflow-hidden hover:border-blue-500/50 transition duration-300">
-                <div class="relative h-56 overflow-hidden bg-slate-900">
-                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80" alt="Intervl Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-6 pt-2">
-                    <h3 class="text-xl font-bold text-white mb-2">Intervl</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        Precision fitness interval timer for high-intensity training. Features custom audio cues and background execution.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Utility</span>
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Health & Fitness</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- APP 6: Name Generator -->
-            <a href="#" class="group block glass-panel rounded-3xl overflow-hidden hover:border-yellow-500/50 transition duration-300">
-                <div class="relative h-56 overflow-hidden bg-slate-900">
-                    <!-- APP STORE RESMİNİ BURAYA YAPIŞTIR: src="..." -->
-                    <img src="https://images.unsplash.com/photo-1516222338250-863216ce01ea?auto=format&fit=crop&w=800&q=80" alt="Name Generator Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-6 pt-2">
-                    <h3 class="text-xl font-bold text-white mb-2">Name Generator</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        Algorithmic naming engine supporting 16+ localized languages. Utilized for brand creation, character naming, and brainstorming.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Productivity</span>
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Multilingual</span>
-                    </div>
-                </div>
-            </a>
-
         </div>
     </section>
 
-    <!-- Engineering & AI Section (Anthropic Başvurusu İçin Kritik Odak) -->
+    <!-- Engineering & AI Section -->
     <section class="max-w-7xl mx-auto px-6 py-16">
         <div class="glass-panel rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-t from-studio-900/20 to-transparent"></div>
