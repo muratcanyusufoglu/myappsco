@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Build with Claude · MyApps Studio</title>
+  <meta name="description" content="How a one-person mobile studio uses Claude Code and the Claude API to build, localize and ship nine apps.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="brand-mark">M</span> MyApps Studio</a>
+    <nav class="nav">
+      <a href="./#apps">Apps</a>
+      <a href="claude.html" aria-current="page">How we build with Claude</a>
+      <a class="hide-sm" href="mailto:contact@myappsco.app">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">How we build with Claude</p>
+      <h1>One developer, nine apps, and Claude at every step</h1>
+      <p class="lede">This page lists what Claude does in our studio today and what we're moving onto it next. Everything under "In production" is running now. Everything under "Next" is labeled with its current status.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">In production</p>
+        <h2>What Claude does today</h2>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <div><span class="status">Daily</span></div>
+          <div>
+            <h3>Claude Code builds every app</h3>
+            <p>Each repository has a <code>CLAUDE.md</code> / <code>AGENTS.md</code> that records its conventions, its decisions and the reasons behind them. Claude Code reads that file and works inside it: product notes, features, tests, Supabase Edge Functions, release scripts.</p>
+            <ul>
+              <li>New apps start from a shared Expo template that comes with i18n, design tokens, onboarding, a paywall, RevenueCat and server-side quotas already wired in. Stirred and Remate were both created from it.</li>
+              <li>Store metadata, screenshot pipelines and fastlane releases are written and kept up to date the same way, for both the App Store and Google Play.</li>
+              <li>Four App Store releases shipped in the first ten days of October 2026.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="step">
+          <div><span class="status">Production</span></div>
+          <div>
+            <h3>Claude Opus localizes our apps</h3>
+            <p>Our <code>i18n-sync</code> script checks every locale against English. It reports missing keys, leftover keys and dropped <code>{{tokens}}</code>, and it flags any locale that is just an untranslated copy of English. With <code>--fill</code> it sends the gaps to the Claude API and writes the translations back. Stirred ships in 31 languages this way.</p>
+            <ul>
+              <li>Tokens must survive translation. A dropped <code>{{count}}</code> breaks a sentence at runtime, and only a reader of that language would notice.</li>
+              <li>Plural forms: Claude adds the extra CLDR forms each language needs (<code>_few</code>, <code>_many</code> for Slavic languages, all six for Arabic).</li>
+              <li>Strings are translated for UI, not literally. They have to fit the button they sit on.</li>
+            </ul>
+<pre><code>node scripts/i18n-sync.mjs --check            # CI / preflight
+node scripts/i18n-sync.mjs --fill --lang de,fr  # translate the gaps with Claude</code></pre>
+          </div>
+        </article>
+
+        <article class="step">
+          <div><span class="status">Production</span></div>
+          <div>
+            <h3>Claude handles the studio's operations work</h3>
+            <p>An internal tool built on the Anthropic SDK scores freelance listings and open-source bounties, then drafts a proposal or a technical assessment for each one. A person reviews and sends everything; nothing is posted automatically.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Next</p>
+        <h2>Moving in-app language features to Claude</h2>
+        <p>Today our in-app AI calls run on low-cost models chosen with small evals. We're moving the language-heavy ones to Claude, because that's where a wrong answer costs a user's trust.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <div><span class="status next">In progress</span></div>
+          <div>
+            <h3>Milo: what a word means in its sentence</h3>
+            <p>A reader taps a word in a quote they saved and gets the dictionary form, the part of speech, the sense used in that sentence, and one line of explanation in their own language. "kederinden" comes back as "keder", and "bank" next to a river means the shore.</p>
+            <ul>
+              <li>Hard cases: Turkish inflected and archaic words, English words explained to a Turkish reader, and five other book languages.</li>
+              <li>We have a 30-question eval with each question asked twice. A model must be right every time and give the same answer on both runs. Claude is the model we're moving to.</li>
+              <li>No personal data reaches the model: a request carries only the word, the sentence and the answer language. Each answer is computed once and cached.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="step">
+          <div><span class="status next">Planned</span></div>
+          <div>
+            <h3>Stirred: shelf scan and reasons behind each pick</h3>
+            <p>Shelf scan turns a photo of a home bar into catalog IDs using an enum-constrained schema. We plan to test Claude's vision on the same shelf-photo eval set, and to have Claude write the one-line reason behind each night's "for you tonight" suggestion in the user's language.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div><span class="status next">Planned</span></div>
+          <div>
+            <h3>HairOn: from onboarding answers to a style brief</h3>
+            <p>HairOn's onboarding asks for face shape, goals, interests and timing. Claude would turn those answers into a structured brief that picks and ranks the looks we generate, in each of HairOn's 31 languages. Image generation itself stays on image models.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="callout">
+        <p class="eyebrow">Why Claude</p>
+        <h2>We ship in many languages, and getting them wrong is expensive</h2>
+        <p>Most of our users don't read English. Language mistakes, like a dropped token, a wrong word sense or a translated brand name, are the bugs we can least afford, because nobody on the team can spot them in Arabic or Polish. Claude is the model we trust with that work, and moving the in-app features above onto it is our next step.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MyApps Studio · Muratcan Yusufoğlu</span>
+    <nav>
+      <a href="./">Apps</a>
+      <a href="https://apps.apple.com/developer/id1682346986" target="_blank" rel="noopener">App Store developer page</a>
+      <a href="mailto:contact@myappsco.app">contact@myappsco.app</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyApps Studio | AI-Native Mobile Ecosystem</title>
+    <link rel="preconnect" href="https://rsms.me/">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+                    },
+                    colors: {
+                        base: '#000000',
+                        surface: '#0A0A0A',
+                        border: '#222222',
+                        muted: '#888888',
+                        claude: '#D97757'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #000000; color: #EDEDED; }
+        .bento-card {
+            background-color: #0A0A0A;
+            border: 1px solid #222222;
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            border-color: #444444;
+            transform: translateY(-2px);
+        }
+        .tech-badge {
+            font-family: 'ui-monospace', monospace;
+            font-size: 0.65rem;
+            letter-spacing: -0.02em;
+            padding: 0.25rem 0.6rem;
+            background: #111111;
+            border: 1px solid #333333;
+            border-radius: 6px;
+            color: #A3A3A3;
+        }
+        .claude-badge {
+            background: rgba(217, 119, 87, 0.1);
+            border: 1px solid rgba(217, 119, 87, 0.3);
+            color: #D97757;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-claude selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 bg-base/80 backdrop-blur-md border-b border-border">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-3 h-3 bg-white rounded-sm"></div>
+                <span class="text-sm font-semibold tracking-tight">MyApps Studio</span>
+            </div>
+            <a href="mailto:contact@myappsco.app" class="text-xs font-medium text-muted hover:text-white transition-colors border border-border px-4 py-2 rounded-full">
+                Get in Touch
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-6 pt-40 pb-20 border-b border-border">
+        <div class="max-w-4xl">
+            <div class="inline-flex items-center gap-2 mb-6 px-3 py-1.5 rounded-full border border-border bg-surface">
+                <span class="w-2 h-2 rounded-full bg-claude animate-pulse"></span>
+                <span class="text-xs font-mono text-muted uppercase tracking-wider">Anthropic Integration Active</span>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-semibold tracking-tight leading-tight mb-8 text-white">
+                Powering mobile utilities with advanced LLM infrastructure.
+            </h1>
+            <p class="text-lg text-muted leading-relaxed max-w-2xl">
+                An independent mobile engineering studio deploying offline-first architectures, native device ML, and <strong class="text-white font-medium">Claude API</strong> pipelines to process context, optimize generative inputs, and localize dynamic content globally.
+            </p>
+        </div>
+    </section>
+
+    <!-- Core Products -->
+    <section class="max-w-7xl mx-auto px-6 py-24 space-y-12">
+        <h2 class="text-sm font-mono text-muted uppercase tracking-widest mb-8">Production Ecosystem</h2>
+        
+        <!-- HairOn AI -->
+        <div class="bento-card rounded-3xl p-8 lg:p-12 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="flex flex-wrap gap-2">
+                    <span class="tech-badge claude-badge">Claude API (Prompt Engineering)</span>
+                    <span class="tech-badge">HairFastGAN</span>
+                    <span class="tech-badge">Supabase Edge</span>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-semibold text-white mb-4">HairOn AI</h2>
+                    <p class="text-base text-muted leading-relaxed">
+                        Flagship generative AI application for hyper-realistic hairstyle and color transfers. Claude acts as the orchestration layer, translating user onboarding quizzes (face shape, style goals) into highly optimized visual prompts for the underlying HairFastGAN models[cite: 3]. Built on a zero-registration, UUID-based identity model ensuring absolute user privacy[cite: 3].
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://apps.apple.com/us/app/hairon-ai-hairstyle-try-on/id6766210297" target="_blank" class="text-xs font-semibold text-white bg-surface border border-border hover:bg-[#111] px-5 py-3 rounded-xl transition-colors">
+                        App Store (iOS)
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.haironai.app&ref=apkcombo.com" target="_blank" class="text-xs font-semibold text-white bg-surface border border-border hover:bg-[#111] px-5 py-3 rounded-xl transition-colors">
+                        Google Play
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/dc/e4/9ddce418-7e83-58ca-2717-c34f08b165bd/01-try-on-f.png/460x996bb.webp" class="rounded-2xl border border-border w-full" alt="HairOn Execution">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/80/f0/90/80f090d8-0a4d-ea0e-81e5-38b7fe4e8a10/02-before-after-f.png/460x996bb.webp" class="rounded-2xl border border-border w-full mt-8" alt="HairFastGAN Results">
+            </div>
+        </div>
+
+        <!-- Milo -->
+        <div class="bento-card rounded-3xl p-8 lg:p-12 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="flex flex-wrap gap-2">
+                    <span class="tech-badge claude-badge">Claude 3.5 Sonnet (NLP Core)</span>
+                    <span class="tech-badge">Expo SDK 57</span>
+                    <span class="tech-badge">On-Device OCR</span>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-semibold text-white mb-4">Milo</h2>
+                    <p class="text-base text-muted leading-relaxed">
+                        A global reading-journal platform centered on camera-to-OCR quote capture across 11 languages[cite: 2]. We leverage Claude to parse raw, fragmented OCR strings, correct line breaks (specifically for Hangul and CJK complexities)[cite: 2], and power the "Define Word" feature by providing contextual definitions based on the surrounding literature rather than static dictionary lookups[cite: 2].
+                    </p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://apps.apple.com/us/developer/muratcan-yusufoglu/id1682346986" target="_blank" class="text-xs font-semibold text-white bg-surface border border-border hover:bg-[#111] px-5 py-3 rounded-xl transition-colors">
+                        View Developer Profile
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e2/bc/95/e2bc9514-1f53-48fa-8c1e-10d865e5c8e1/03_shelf.png/460x998bb.webp" class="rounded-2xl border border-border w-full" alt="Milo Shelf">
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d1/89/8f/d1898f41-bf09-0c6c-139e-8d4ab5f2293f/04_card.png/460x998bb.webp" class="rounded-2xl border border-border w-full mt-8" alt="Milo NLP Feature">
+            </div>
+        </div>
+
+        <!-- Aurora & Who's Imposter -->
+        <div class="grid md:grid-cols-2 gap-12 pt-8">
+            <div class="space-y-6">
+                <h3 class="text-2xl font-semibold text-white">Aurora</h3>
+                <div class="flex gap-2 mb-2">
+                    <span class="tech-badge claude-badge">Claude API (Generation)</span>
+                    <span class="tech-badge">React Native</span>
+                </div>
+                <p class="text-sm text-muted leading-relaxed">
+                    Daily motivation engine. Claude dynamically generates localized daily affirmations and adjusts content tone based on user mood inputs, updating iOS Lock Screen widgets seamlessly.
+                </p>
+                <a href="https://apps.apple.com/us/app/aurora-quotes-affirmations/id6478839088" target="_blank" class="inline-block text-xs font-semibold text-white mt-2 hover:text-claude transition-colors">View App Store →</a>
+            </div>
+
+            <div class="space-y-6 border-l border-border pl-12">
+                <h3 class="text-2xl font-semibold text-white">Who's Imposter?</h3>
+                <div class="flex gap-2 mb-2">
+                    <span class="tech-badge">State Sync</span>
+                    <span class="tech-badge">Multiplayer</span>
+                </div>
+                <p class="text-sm text-muted leading-relaxed">
+                    Pass-and-play social deduction game architecture. Designed for offline multi-user dynamics and complex state management without relying on real-time database socket connections.
+                </p>
+                <a href="https://apps.apple.com/us/app/whos-imposter-party-games/id6466736412" target="_blank" class="inline-block text-xs font-semibold text-white mt-2 hover:text-claude transition-colors">View App Store →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Claude Strategy Details -->
+    <section class="bg-surface border-y border-border py-24">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-2xl font-semibold text-white mb-4">Why We Require Claude for Startups</h2>
+                <p class="text-sm text-muted leading-relaxed mb-6">
+                    Our studio is aggressively transitioning all generative logic to Anthropic's models due to superior structural adherence, deep multilingual reasoning, and low-latency JSON outputs essential for mobile Edge Functions.
+                </p>
+            </div>
+            <div class="space-y-6">
+                <div class="border-l-2 border-claude pl-6">
+                    <h4 class="text-white font-medium mb-2">1. Multilingual Contextual Parsing</h4>
+                    <p class="text-xs text-muted leading-relaxed">Milo requires complex text correction. Claude's ability to natively understand structural nuances in Turkish, Japanese (Kanji breaks), and Korean (Hangul spacing) outperforms standard segmentation APIs[cite: 2].</p>
+                </div>
+                <div class="border-l-2 border-border pl-6">
+                    <h4 class="text-white font-medium mb-2">2. Vision-to-Prompt Translation</h4>
+                    <p class="text-xs text-muted leading-relaxed">For HairOn AI, Claude processes unstructured user desires ("I want a messy look suitable for an oval face") into precise parameters required by our backend GAN models[cite: 3].</p>
+                </div>
+                <div class="border-l-2 border-border pl-6">
+                    <h4 class="text-white font-medium mb-2">3. Dynamic Localization at Edge</h4>
+                    <p class="text-xs text-muted leading-relaxed">Replacing static translation JSON files with Claude-driven dynamic copy generation for personalized user experiences across 16 global markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs text-muted">
+            <p>2026 © MyApps Studio. Technical portfolio submitted for Anthropic Startup Program.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="https://apps.apple.com/us/developer/muratcan-yusufoglu/id1682346986" target="_blank" class="hover:text-white transition-colors">App Store Developer Profile</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

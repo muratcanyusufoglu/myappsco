@@ -1,188 +1,189 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyApps Studio | AI-Powered Mobile Ecosystem</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        studio: { 500: '#3b82f6', 600: '#2563eb' },
-                        dark: '#0a0a0a'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #0a0a0a; }
-        .glass-panel {
-            background: rgba(24, 24, 27, 0.6);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .image-mask {
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
-        }
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyApps Studio</title>
+  <meta name="description" content="MyApps Studio is an independent mobile studio shipping nine apps to the App Store, built with React Native, Expo, Supabase and Claude.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="text-slate-200 font-sans antialiased selection:bg-studio-500 selection:text-white">
+<body>
 
-    <!-- Navigation -->
-    <header class="fixed top-0 w-full z-50 glass-panel border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-lg bg-white text-black flex items-center justify-center font-black text-xl">M</div>
-                <span class="text-lg font-bold tracking-tight text-white">MyApps Studio</span>
-            </div>
-            <a href="mailto:contact@myappsco.online" class="text-xs font-semibold px-5 py-2 rounded-full bg-white text-black hover:bg-slate-200 transition">
-                Contact Studio
-            </a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./"><span class="brand-mark">M</span> MyApps Studio</a>
+    <nav class="nav">
+      <a href="#apps">Apps</a>
+      <a href="claude.html">How we build with Claude</a>
+      <a class="hide-sm" href="mailto:contact@myappsco.app">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Independent mobile studio</p>
+      <h1>Nine apps live on the App Store.<br>One developer, with Claude as the team.</h1>
+      <p class="lede">MyApps Studio is run by Muratcan Yusufoğlu. We design, build, localize and ship consumer apps end to end with React Native, Expo and Supabase, and Claude takes part in every step from the first spec to the last store listing.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#apps">See the apps</a>
+        <a class="btn btn-ghost" href="claude.html">How we build with Claude</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><b>9</b><span>apps live on the App Store</span></div>
+        <div class="stat"><b>31</b><span>languages in HairOn and Stirred</span></div>
+        <div class="stat"><b>4</b><span>releases shipped in October 2026</span></div>
+        <div class="stat"><b class="small">iOS · Android · macOS</b><span>platforms we ship to</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apps">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Where we're focused</p>
+        <h2>Three products in active development</h2>
+        <p>These three get most of our time. Each one has a Supabase or Cloudflare backend, server-side subscription checks through RevenueCat, and AI features with a real cost per request.</p>
+      </div>
+
+      <article class="feature">
+        <div>
+          <div class="app-title">
+            <img class="app-icon" src="assets/icon-8441e2.jpg" alt="">
+            <div><h3>HairOn</h3><small>AI hairstyle try-on · iOS &amp; Android</small></div>
+          </div>
+          <p>Upload a selfie and see more than 100 hairstyles and hair colors on your own face before you go to the salon.</p>
+          <ul class="facts">
+            <li><span>AI</span><span>Image editing models run behind 35 Supabase Edge Functions, with a server-side quota for each user</span></li>
+            <li><span>Reach</span><span>31 languages · App Store and Google Play</span></li>
+            <li><span>Status</span><span>v1.0.22, released 7 Oct 2026</span></li>
+          </ul>
+          <a class="store-link" href="https://apps.apple.com/app/id6766210297" target="_blank" rel="noopener">View on the App Store →</a>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-studio-600/20 via-dark to-dark -z-10"></div>
-        <div class="max-w-4xl mx-auto text-center space-y-8">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs font-medium text-slate-300">
-                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                Actively scaling with Claude AI
-            </div>
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-tight">
-                Intelligent Mobile <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-studio-500 to-purple-500">Experiences</span>
-            </h1>
-            <p class="text-lg text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                An independent mobile engineering studio integrating Generative AI, privacy-first data architecture, and offline-capable utilities for a global audience.
-            </p>
+        <div class="shots">
+          <img loading="lazy" src="assets/01-try-on-f.webp" alt="HairOn try-on screen">
+          <img loading="lazy" src="assets/02-before-after-f.webp" alt="HairOn before and after">
+          <img loading="lazy" src="assets/05-men-haircut-f.webp" alt="HairOn men's haircuts">
         </div>
-    </section>
+      </article>
 
-    <!-- Products Grid -->
-    <section class="max-w-7xl mx-auto px-6 py-12">
-        <h2 class="text-2xl font-bold text-white mb-10 flex items-center gap-4">
-            Our Ecosystem
-            <span class="h-px bg-white/10 flex-1"></span>
-        </h2>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            
-            <!-- APP 1: HairOn AI (Amiral Gemisi - Tam Genişlik) -->
-            <a href="https://apps.apple.com/us/app/hairon-ai-hairstyle-try-on/id6502830882" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-purple-500/50 transition duration-300 md:col-span-2 lg:col-span-3">
-                <div class="p-8 flex flex-col md:flex-row gap-8 items-center bg-gradient-to-br from-slate-900 to-slate-950">
-                    <div class="flex-1 space-y-4">
-                        <div class="inline-flex px-3 py-1 bg-purple-500/20 backdrop-blur-md border border-purple-500/30 rounded-full text-[10px] font-bold text-purple-300 uppercase tracking-wide mb-2">
-                            Flagship AI Model
-                        </div>
-                        <h3 class="text-3xl font-extrabold text-white mb-2">HairOn AI</h3>
-                        <p class="text-base text-slate-400 leading-relaxed max-w-md">
-                            Hyper-realistic virtual hairstyle and color simulator powered by custom vision models and facial mapping technology.
-                        </p>
-                        <div class="flex gap-2 pt-2">
-                            <span class="text-xs px-3 py-1.5 bg-white/5 border border-white/10 rounded-md text-slate-300">Generative AI</span>
-                            <span class="text-xs px-3 py-1.5 bg-white/5 border border-white/10 rounded-md text-slate-300">iOS & Android</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Dinamik Ekran Görüntüsü Galerisi -->
-                    <div class="flex-1 w-full flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar py-4 md:py-0">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/dc/e4/9ddce418-7e83-58ca-2717-c34f08b165bd/01-try-on-f.png/460x996bb.webp" alt="HairOn Try On" class="h-72 w-auto rounded-2xl object-contain snap-center border border-white/10 shadow-2xl shadow-purple-900/20 group-hover:-translate-y-1 transition duration-300">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/80/f0/90/80f090d8-0a4d-ea0e-81e5-38b7fe4e8a10/02-before-after-f.png/460x996bb.webp" alt="HairOn Before After" class="h-72 w-auto rounded-2xl object-contain snap-center border border-white/10 shadow-2xl shadow-purple-900/20 group-hover:-translate-y-1 transition duration-300 delay-75">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ce/4d/d0/ce4dd032-5610-318e-3ec3-2dc979b9cae5/11-home-f.png/460x996bb.webp" alt="HairOn Home" class="h-72 w-auto rounded-2xl object-contain snap-center border border-white/10 shadow-2xl shadow-purple-900/20 group-hover:-translate-y-1 transition duration-300 delay-150">
-                        <img src="https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a1/b2/db/a1b2db02-70d2-a26a-7141-b7113497cf9c/09-skin-retouch-f.png/460x996bb.webp" alt="HairOn Skin Retouch" class="h-72 w-auto rounded-2xl object-contain snap-center border border-white/10 shadow-2xl shadow-purple-900/20 group-hover:-translate-y-1 transition duration-300 delay-200">
-                    </div>
-                </div>
-            </a>
-
-            <!-- APP 2: Aurora -->
-            <a href="https://apps.apple.com/us/app/aurora-quotes-affirmations/id6478839088" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-orange-500/50 transition duration-300">
-                <div class="relative h-56 overflow-hidden bg-slate-900">
-                    <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80" alt="Aurora App Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-6 pt-2">
-                    <h3 class="text-xl font-bold text-white mb-2">Aurora: Quotes</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        Personalized daily motivation engine. Features smart widgets, localized translations, and AI-driven mood adaptive content.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Wellness</span>
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">React Native</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- APP 3: OneLine -->
-            <a href="#" class="group block glass-panel rounded-3xl overflow-hidden hover:border-emerald-500/50 transition duration-300">
-                <div class="relative h-56 overflow-hidden bg-slate-900">
-                    <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=800&q=80" alt="OneLine App Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-6 pt-2">
-                    <h3 class="text-xl font-bold text-white mb-2">OneLine Journal</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        Minimalist, offline-first daily micro-journaling app. Built on SQLite for absolute data privacy and rapid local performance.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Privacy-First</span>
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">SQLite</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- APP 4: Who's Imposter -->
-            <a href="https://apps.apple.com/us/app/whos-imposter-party-games/id6466736412" target="_blank" class="group block glass-panel rounded-3xl overflow-hidden hover:border-red-500/50 transition duration-300">
-                <div class="relative h-56 overflow-hidden bg-slate-900">
-                    <img src="https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=800&q=80" alt="Who's Imposter Interface" class="w-full h-full object-cover image-mask group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-6 pt-2">
-                    <h3 class="text-xl font-bold text-white mb-2">Who's Imposter?</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed mb-4">
-                        Local multiplayer social deduction game. Pass-and-play mechanics designed for social gatherings and tabletop dynamics.
-                    </p>
-                    <div class="flex gap-2">
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Social Gaming</span>
-                        <span class="text-xs px-2 py-1 bg-white/5 rounded-md text-slate-300">Multiplayer</span>
-                    </div>
-                </div>
-            </a>
-
+      <article class="feature">
+        <div>
+          <div class="app-title">
+            <img class="app-icon" src="assets/icon-f15343.jpg" alt="">
+            <div><h3>Milo</h3><small>Reading journal · iOS &amp; Android</small></div>
+          </div>
+          <p>Photograph a page and Milo keeps the sentence, together with the book, the date and the page number. Tap any word to see what it means in that sentence, whatever language the book is in.</p>
+          <ul class="facts">
+            <li><span>AI</span><span>Contextual word definitions are moving to Claude <span class="tag">In progress</span></span></li>
+            <li><span>Reach</span><span>11 languages · books in any language</span></li>
+            <li><span>Status</span><span>v1.1.1, released 6 Oct 2026</span></li>
+          </ul>
+          <a class="store-link" href="https://apps.apple.com/app/id6812041975" target="_blank" rel="noopener">View on the App Store →</a>
         </div>
-    </section>
-
-    <!-- Engineering & AI Section -->
-    <section class="max-w-7xl mx-auto px-6 py-16">
-        <div class="glass-panel rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-t from-studio-900/20 to-transparent"></div>
-            <h2 class="text-3xl font-extrabold text-white mb-6">Our Tech & AI Integration Strategy</h2>
-            <p class="text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-                We are transitioning our core logic from static algorithms to dynamic Large Language Models. By leveraging <strong>Claude's API</strong>, we aim to enhance <em>HairOn AI's</em> style recommendation engine, introduce dynamic contextual analysis in <em>OneLine</em>, and optimize multilingual generation models.
-            </p>
-            
-            <div class="flex flex-wrap justify-center gap-4 text-sm font-medium">
-                <div class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white">React Native (Expo)</div>
-                <div class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white">TypeScript</div>
-                <div class="px-5 py-2.5 rounded-xl bg-studio-500/20 border border-studio-500/30 text-studio-300">Claude LLMs</div>
-                <div class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white">Offline SQLite</div>
-                <div class="px-5 py-2.5 rounded-xl bg-white/5 border border-white/10 text-white">NestJS & GraphQL</div>
-            </div>
+        <div class="shots">
+          <img loading="lazy" src="assets/01_capture.webp" alt="Milo capture screen">
+          <img loading="lazy" src="assets/02_post.webp" alt="Milo quote post">
+          <img loading="lazy" src="assets/03_shelf.webp" alt="Milo bookshelf">
         </div>
-    </section>
+      </article>
 
-    <!-- Footer -->
-    <footer class="border-t border-white/10 mt-12 py-8 text-center text-sm text-slate-500">
-        <div class="flex justify-center gap-6 mb-4">
-            <a href="https://apps.apple.com/us/developer/muratcan-yusufoglu/id1682346986" target="_blank" class="hover:text-white transition">App Store Developer Profile</a>
-            <a href="mailto:contact@myappsco.online" class="hover:text-white transition">contact@myappsco.online</a>
+      <article class="feature">
+        <div>
+          <div class="app-title">
+            <img class="app-icon" src="assets/icon-58902f.jpg" alt="">
+            <div><h3>Stirred</h3><small>Home bar &amp; cocktails · iOS</small></div>
+          </div>
+          <p>Mark the bottles on your shelf and Stirred shows what you can make tonight, plus the one bottle that would unlock the most new recipes. The library has 600 recipes, each checked against two independent published sources.</p>
+          <ul class="facts">
+            <li><span>AI</span><span>Shelf scan: a photo of your bottles becomes inventory, through a Cloudflare Worker with schema-constrained output. UI localized with Claude Opus.</span></li>
+            <li><span>Reach</span><span>31 languages</span></li>
+            <li><span>Status</span><span>v1.0, launched 9 Oct 2026</span></li>
+          </ul>
+          <a class="store-link" href="https://apps.apple.com/app/id6816961742" target="_blank" rel="noopener">View on the App Store →</a>
         </div>
-        <p>© 2026 MyApps Studio. Independently engineered.</p>
-    </footer>
+        <div class="shots">
+          <img loading="lazy" src="assets/iphone-01-bar.webp" alt="Stirred bar screen">
+          <img loading="lazy" src="assets/iphone-02-scan.webp" alt="Stirred shelf scan">
+          <img loading="lazy" src="assets/iphone-04-next.webp" alt="Stirred next bottle suggestion">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Also live</p>
+        <h2>The rest of the catalog</h2>
+      </div>
+      <div class="grid">
+        <a class="card" href="https://apps.apple.com/app/id6760238596" target="_blank" rel="noopener">
+          <img class="app-icon" src="assets/icon-b67b7f.jpg" alt="">
+          <h3>Who's Imposter?</h3>
+          <p>Offline party games for 3–15 players on a single phone.</p>
+          <span class="meta">Games · iOS</span>
+        </a>
+        <a class="card" href="https://apps.apple.com/app/id6796044611" target="_blank" rel="noopener">
+          <img class="app-icon" src="assets/icon-2e0b4c.png" alt="">
+          <h3>Copydeck</h3>
+          <p>Native menu-bar clipboard manager with search and OCR.</p>
+          <span class="meta">Productivity · macOS</span>
+        </a>
+        <a class="card" href="https://apps.apple.com/app/id6742381379" target="_blank" rel="noopener">
+          <img class="app-icon" src="assets/icon-470437.jpg" alt="">
+          <h3>Soundboard Pro</h3>
+          <p>227 offline sound effects on five boards. No ads.</p>
+          <span class="meta">Entertainment · iOS · rated 5.0</span>
+        </a>
+        <a class="card" href="https://apps.apple.com/app/id6741737856" target="_blank" rel="noopener">
+          <img class="app-icon" src="assets/icon-cc22d6.jpg" alt="">
+          <h3>Name Generator</h3>
+          <p>AI name ideas for babies, brands and pets, with the meaning and origin of each name.</p>
+          <span class="meta">Productivity · iOS</span>
+        </a>
+        <a class="card" href="https://apps.apple.com/app/id6747951525" target="_blank" rel="noopener">
+          <img class="app-icon" src="assets/icon-be7c77.jpg" alt="">
+          <h3>Aurora</h3>
+          <p>Daily quotes and affirmations, matched to your mood, with home-screen widgets.</p>
+          <span class="meta">Health &amp; Fitness · iOS</span>
+        </a>
+        <a class="card" href="https://apps.apple.com/app/id6744692370" target="_blank" rel="noopener">
+          <img class="app-icon" src="assets/icon-28c498.jpg" alt="">
+          <h3>PetMorph AI</h3>
+          <p>Turns photos of your pet into portraits, avatars and anime-style art.</p>
+          <span class="meta">Photo &amp; Video · iOS</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="callout">
+        <p class="eyebrow">How we work</p>
+        <h2>Claude is how a one-person studio ships nine apps</h2>
+        <p>Every repository has its own instructions for Claude Code. A Claude-backed pipeline translates our interfaces into 31 languages, and the next step is moving our in-app language features onto Claude as well. <a href="claude.html">Read the details →</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 MyApps Studio · Muratcan Yusufoğlu</span>
+    <nav>
+      <a href="https://apps.apple.com/developer/id1682346986" target="_blank" rel="noopener">App Store developer page</a>
+      <a href="claude.html">How we build with Claude</a>
+      <a href="mailto:contact@myappsco.app">contact@myappsco.app</a>
+    </nav>
+  </div>
+</footer>
 
 </body>
 </html>
