@@ -40,7 +40,7 @@ a { color: inherit; }
 .site-header { border-bottom: 1px solid var(--line); background: var(--bg); position: sticky; top: 0; z-index: 10; }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; letter-spacing: -0.01em; }
-.brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--ink); color: var(--bg); display: grid; place-items: center; font: 600 15px/1 var(--serif); }
+.brand-mark { width: 28px; height: 28px; border-radius: 8px; }
 .nav { display: flex; gap: 22px; font-size: 14px; }
 .nav a { text-decoration: none; color: var(--muted); }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--ink); }
