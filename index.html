@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyApps Studio</title>
-  <meta name="description" content="MyApps Studio is an independent mobile studio shipping nine apps to the App Store, built with React Native, Expo, Supabase and Claude.">
+  <title>MyApps Studio — Independent App Studio</title>
+  <meta name="description" content="MyApps Studio is an independent app studio in Ankara with nine apps on the App Store, including HairOn, Milo and Stirred.">
+  <meta property="og:title" content="MyApps Studio — Independent App Studio">
+  <meta property="og:description" content="MyApps Studio is an independent app studio in Ankara with nine apps on the App Store, including HairOn, Milo and Stirred.">
+  <meta property="og:type" content="website">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,175 +19,225 @@
 
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="./"><img class="brand-mark" src="favicon.svg" alt=""> MyApps Studio</a>
+    <a class="brand" href="index.html"><img class="brand-mark" src="favicon.svg" alt=""> MyApps Studio</a>
     <nav class="nav">
-      <a href="#apps">Apps</a>
-      <a href="claude.html">How we build with Claude</a>
-      <a class="hide-sm" href="mailto:contact@myappsco.app">Contact</a>
+      <a href="index.html#work" aria-current="page">Work</a>
+      <a href="claude.html">How we build</a>
+      <a href="index.html#studio">Studio</a>
+      <a class="nav-cta" href="mailto:contact@myappsco.app">Contact</a>
     </nav>
   </div>
 </header>
 
 <main>
   <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Independent mobile studio</p>
-      <h1>Nine apps live on the App Store.<br>One developer, with Claude as the team.</h1>
-      <p class="lede">MyApps Studio is run by Muratcan Yusufoğlu. We design, build, localize and ship consumer apps end to end with React Native, Expo and Supabase, and Claude takes part in every step from the first spec to the last store listing.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#apps">See the apps</a>
-        <a class="btn btn-ghost" href="claude.html">How we build with Claude</a>
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Independent app studio · Ankara</p>
+        <h1>We make focused, well-crafted apps for everyday moments.</h1>
+        <p class="lede">MyApps Studio designs, builds and runs consumer apps end to end: product, engineering, localization and growth. There are nine apps on the App Store today, three of them in active development.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">See our work</a>
+          <a class="btn btn-ghost" href="claude.html">How we build</a>
+        </div>
       </div>
-
+      <div class="hero-phones" aria-hidden="true">
+        <img src="assets/apps/hairon/shot-1.webp" alt=""><img src="assets/apps/milo/shot-1.webp" alt=""><img src="assets/apps/stirred/shot-1.webp" alt="">
+      </div>
+    </div>
+    <div class="wrap">
       <div class="stats">
         <div class="stat"><b>9</b><span>apps live on the App Store</span></div>
-        <div class="stat"><b>31</b><span>languages in HairOn and Stirred</span></div>
-        <div class="stat"><b>4</b><span>releases shipped in October 2026</span></div>
-        <div class="stat"><b class="small">iOS · Android · macOS</b><span>platforms we ship to</span></div>
+        <div class="stat"><b>31</b><span>languages in our largest apps</span></div>
+        <div class="stat"><b>4</b><span>platforms: iOS, iPadOS, Android, macOS</span></div>
+        <div class="stat"><b>2024</b><span>founded in Ankara, Türkiye</span></div>
       </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Selected work</p>
+        <h2>Products in active development</h2>
+        <p>Each of these runs on its own backend, checks subscriptions on the server, and ships updates every few weeks.</p>
+      </div>
+      <article class="feature" style="--accent:#b0426a">
+        <div class="feature-text">
+          <div class="app-title">
+            <img class="app-icon" src="assets/apps/hairon/icon.png" alt="">
+            <div><h3>HairOn</h3><small>Photo &amp; Video · iOS · Android</small></div>
+          </div>
+          <p class="feature-tagline">See it before you cut it.</p>
+          <p>Upload a selfie and try more than 100 hairstyles and hair colors on your own face before you book the salon. The results follow your face shape, skin tone and lighting, so they look like you rather than a filter.</p>
+          <dl class="facts"><div><dt>Languages</dt><dd>31</dd></div><div><dt>Model</dt><dd>Free with subscription</dd></div><div><dt>Released</dt><dd>June 2026</dd></div></dl>
+          <div class="feature-actions">
+            <a class="btn btn-primary" href="apps/hairon.html">Read more</a>
+            <div class="store-row compact"><a class="store-btn" href="https://apps.apple.com/app/id6766210297" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.2 5.8c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.3z"/></svg><span><small>Download on the</small>App Store</span></a><a class="store-btn" href="https://play.google.com/store/apps/details?id=com.haironai.app" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.2 2.6c-.3.3-.4.7-.4 1.2v16.4c0 .5.1.9.4 1.2l9.1-9.4-9.1-9.4zm10.4 8.1 2.6-2.7-10.9-6.2c-.4-.2-.8-.3-1.1-.2l9.4 9.1zm0 2.6-9.4 9.1c.3.1.7 0 1.1-.2l10.9-6.2-2.6-2.7zm5.6-3.6-2.3-1.3-2.9 2.9 2.9 2.9 2.3-1.3c.9-.5.9-1.7 0-2.2z"/></svg><span><small>Get it on</small>Google Play</span></a></div>
+          </div>
+        </div>
+        <div class="shots"><img src="assets/apps/hairon/shot-1.webp" alt="HairOn screenshot" loading="lazy"><img src="assets/apps/hairon/shot-2.webp" alt="HairOn screenshot" loading="lazy"><img src="assets/apps/hairon/shot-3.webp" alt="HairOn screenshot" loading="lazy"></div>
+      </article><article class="feature" style="--accent:#c6633c">
+        <div class="feature-text">
+          <div class="app-title">
+            <img class="app-icon" src="assets/apps/milo/icon.png" alt="">
+            <div><h3>Milo</h3><small>Books · iOS</small></div>
+          </div>
+          <p class="feature-tagline">Keep the sentences, not just the books.</p>
+          <p>A reading journal built around the moment a line stops you. Photograph the page, and Milo reads the text off it and keeps the sentence along with the book, the date and the page.</p>
+          <dl class="facts"><div><dt>Languages</dt><dd>11</dd></div><div><dt>Model</dt><dd>Free with Pro</dd></div><div><dt>Released</dt><dd>September 2026</dd></div></dl>
+          <div class="feature-actions">
+            <a class="btn btn-primary" href="apps/milo.html">Read more</a>
+            <div class="store-row compact"><a class="store-btn" href="https://apps.apple.com/app/id6812041975" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.2 5.8c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.3z"/></svg><span><small>Download on the</small>App Store</span></a></div>
+          </div>
+        </div>
+        <div class="shots"><img src="assets/apps/milo/shot-1.webp" alt="Milo screenshot" loading="lazy"><img src="assets/apps/milo/shot-2.webp" alt="Milo screenshot" loading="lazy"><img src="assets/apps/milo/shot-3.webp" alt="Milo screenshot" loading="lazy"></div>
+      </article><article class="feature" style="--accent:#9a5b2c">
+        <div class="feature-text">
+          <div class="app-title">
+            <img class="app-icon" src="assets/apps/stirred/icon.png" alt="">
+            <div><h3>Stirred</h3><small>Food &amp; Drink · iOS · iPadOS</small></div>
+          </div>
+          <p class="feature-tagline">What can your bar make tonight?</p>
+          <p>Mark the bottles on your shelf and Stirred shows every cocktail you can make, the drinks you are one bottle away from, and the single bottle that opens up the most new recipes.</p>
+          <dl class="facts"><div><dt>Languages</dt><dd>31</dd></div><div><dt>Model</dt><dd>Free with Pro</dd></div><div><dt>Released</dt><dd>October 2026</dd></div></dl>
+          <div class="feature-actions">
+            <a class="btn btn-primary" href="apps/stirred.html">Read more</a>
+            <div class="store-row compact"><a class="store-btn" href="https://apps.apple.com/app/id6816961742" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.8-3.5.8-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.2 5.8c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.3z"/></svg><span><small>Download on the</small>App Store</span></a></div>
+          </div>
+        </div>
+        <div class="shots"><img src="assets/apps/stirred/shot-1.webp" alt="Stirred screenshot" loading="lazy"><img src="assets/apps/stirred/shot-2.webp" alt="Stirred screenshot" loading="lazy"><img src="assets/apps/stirred/shot-3.webp" alt="Stirred screenshot" loading="lazy"></div>
+      </article>
     </div>
   </section>
 
   <section id="apps">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Where we're focused</p>
-        <h2>Three products in active development</h2>
-        <p>These three get most of our time. Each one has a Supabase or Cloudflare backend, server-side subscription checks through RevenueCat, and AI features with a real cost per request.</p>
+        <p class="eyebrow">Catalog</p>
+        <h2>Everything we've shipped</h2>
       </div>
-
-      <article class="feature">
-        <div>
-          <div class="app-title">
-            <img class="app-icon" src="assets/icon-8441e2.jpg" alt="">
-            <div><h3>HairOn</h3><small>AI hairstyle try-on · iOS &amp; Android</small></div>
+      <div class="app-grid">
+        <a class="app-card" href="apps/whos-imposter.html">
+          <img class="app-icon" src="assets/apps/whos-imposter/icon.png" alt="" loading="lazy">
+          <div>
+            <h3>Who&#x27;s Imposter?</h3>
+            <p>One phone. Zero WiFi. Twelve party games.</p>
+            <div class="chips"><span class="chip">iOS</span><span class="chip">iPadOS</span><span class="chip chip-plain">Games</span></div>
           </div>
-          <p>Upload a selfie and see more than 100 hairstyles and hair colors on your own face before you go to the salon.</p>
-          <ul class="facts">
-            <li><span>AI</span><span>Image editing models run behind 35 Supabase Edge Functions, with a server-side quota for each user</span></li>
-            <li><span>Reach</span><span>31 languages · App Store and Google Play</span></li>
-            <li><span>Status</span><span>v1.0.22, released 7 Oct 2026</span></li>
-          </ul>
-          <a class="store-link" href="https://apps.apple.com/app/id6766210297" target="_blank" rel="noopener">View on the App Store →</a>
-        </div>
-        <div class="shots">
-          <img loading="lazy" src="assets/01-try-on-f.webp" alt="HairOn try-on screen">
-          <img loading="lazy" src="assets/02-before-after-f.webp" alt="HairOn before and after">
-          <img loading="lazy" src="assets/05-men-haircut-f.webp" alt="HairOn men's haircuts">
-        </div>
-      </article>
-
-      <article class="feature">
-        <div>
-          <div class="app-title">
-            <img class="app-icon" src="assets/icon-f15343.jpg" alt="">
-            <div><h3>Milo</h3><small>Reading journal · iOS &amp; Android</small></div>
+        </a><a class="app-card" href="apps/copydeck.html">
+          <img class="app-icon" src="assets/apps/copydeck/icon.png" alt="" loading="lazy">
+          <div>
+            <h3>Copydeck</h3>
+            <p>Everything you copy, remembered for months.</p>
+            <div class="chips"><span class="chip">macOS</span><span class="chip chip-plain">Productivity</span></div>
           </div>
-          <p>Photograph a page and Milo keeps the sentence, together with the book, the date and the page number. Tap any word to see what it means in that sentence, whatever language the book is in.</p>
-          <ul class="facts">
-            <li><span>AI</span><span>Contextual word definitions are moving to Claude <span class="tag">In progress</span></span></li>
-            <li><span>Reach</span><span>11 languages · books in any language</span></li>
-            <li><span>Status</span><span>v1.1.1, released 6 Oct 2026</span></li>
-          </ul>
-          <a class="store-link" href="https://apps.apple.com/app/id6812041975" target="_blank" rel="noopener">View on the App Store →</a>
-        </div>
-        <div class="shots">
-          <img loading="lazy" src="assets/01_capture.webp" alt="Milo capture screen">
-          <img loading="lazy" src="assets/02_post.webp" alt="Milo quote post">
-          <img loading="lazy" src="assets/03_shelf.webp" alt="Milo bookshelf">
-        </div>
-      </article>
-
-      <article class="feature">
-        <div>
-          <div class="app-title">
-            <img class="app-icon" src="assets/icon-58902f.jpg" alt="">
-            <div><h3>Stirred</h3><small>Home bar &amp; cocktails · iOS</small></div>
+        </a><a class="app-card" href="apps/soundboard-pro.html">
+          <img class="app-icon" src="assets/apps/soundboard-pro/icon.png" alt="" loading="lazy">
+          <div>
+            <h3>Soundboard Pro</h3>
+            <p>Tap a pad. The sound is out.</p>
+            <div class="chips"><span class="chip">iOS</span><span class="chip">iPadOS</span><span class="chip chip-plain">Entertainment</span></div>
           </div>
-          <p>Mark the bottles on your shelf and Stirred shows what you can make tonight, plus the one bottle that would unlock the most new recipes. The library has 600 recipes, each checked against two independent published sources.</p>
-          <ul class="facts">
-            <li><span>AI</span><span>Shelf scan: a photo of your bottles becomes inventory, through a Cloudflare Worker with schema-constrained output. UI localized with Claude Opus.</span></li>
-            <li><span>Reach</span><span>31 languages</span></li>
-            <li><span>Status</span><span>v1.0, launched 9 Oct 2026</span></li>
-          </ul>
-          <a class="store-link" href="https://apps.apple.com/app/id6816961742" target="_blank" rel="noopener">View on the App Store →</a>
-        </div>
-        <div class="shots">
-          <img loading="lazy" src="assets/iphone-01-bar.webp" alt="Stirred bar screen">
-          <img loading="lazy" src="assets/iphone-02-scan.webp" alt="Stirred shelf scan">
-          <img loading="lazy" src="assets/iphone-04-next.webp" alt="Stirred next bottle suggestion">
-        </div>
-      </article>
+        </a><a class="app-card" href="apps/name-generator.html">
+          <img class="app-icon" src="assets/apps/name-generator/icon.png" alt="" loading="lazy">
+          <div>
+            <h3>Name Generator</h3>
+            <p>The right name, with its meaning.</p>
+            <div class="chips"><span class="chip">iOS</span><span class="chip">iPadOS</span><span class="chip chip-plain">Productivity</span></div>
+          </div>
+        </a><a class="app-card" href="apps/aurora.html">
+          <img class="app-icon" src="assets/apps/aurora/icon.png" alt="" loading="lazy">
+          <div>
+            <h3>Aurora</h3>
+            <p>A small spark, every day.</p>
+            <div class="chips"><span class="chip">iOS</span><span class="chip">iPadOS</span><span class="chip chip-plain">Health &amp; Fitness</span></div>
+          </div>
+        </a><a class="app-card" href="apps/petmorph.html">
+          <img class="app-icon" src="assets/apps/petmorph/icon.png" alt="" loading="lazy">
+          <div>
+            <h3>PetMorph AI</h3>
+            <p>Your pet, reimagined.</p>
+            <div class="chips"><span class="chip">iOS</span><span class="chip">iPadOS</span><span class="chip chip-plain">Photo &amp; Video</span></div>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section>
+  <section id="principles">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Also live</p>
-        <h2>The rest of the catalog</h2>
+        <p class="eyebrow">How we work</p>
+        <h2>A few rules every app follows</h2>
       </div>
-      <div class="grid">
-        <a class="card" href="https://apps.apple.com/app/id6760238596" target="_blank" rel="noopener">
-          <img class="app-icon" src="assets/icon-b67b7f.jpg" alt="">
-          <h3>Who's Imposter?</h3>
-          <p>Offline party games for 3–15 players on a single phone.</p>
-          <span class="meta">Games · iOS</span>
-        </a>
-        <a class="card" href="https://apps.apple.com/app/id6796044611" target="_blank" rel="noopener">
-          <img class="app-icon" src="assets/icon-2e0b4c.png" alt="">
-          <h3>Copydeck</h3>
-          <p>Native menu-bar clipboard manager with search and OCR.</p>
-          <span class="meta">Productivity · macOS</span>
-        </a>
-        <a class="card" href="https://apps.apple.com/app/id6742381379" target="_blank" rel="noopener">
-          <img class="app-icon" src="assets/icon-470437.jpg" alt="">
-          <h3>Soundboard Pro</h3>
-          <p>227 offline sound effects on five boards. No ads.</p>
-          <span class="meta">Entertainment · iOS · rated 5.0</span>
-        </a>
-        <a class="card" href="https://apps.apple.com/app/id6741737856" target="_blank" rel="noopener">
-          <img class="app-icon" src="assets/icon-cc22d6.jpg" alt="">
-          <h3>Name Generator</h3>
-          <p>AI name ideas for babies, brands and pets, with the meaning and origin of each name.</p>
-          <span class="meta">Productivity · iOS</span>
-        </a>
-        <a class="card" href="https://apps.apple.com/app/id6747951525" target="_blank" rel="noopener">
-          <img class="app-icon" src="assets/icon-be7c77.jpg" alt="">
-          <h3>Aurora</h3>
-          <p>Daily quotes and affirmations, matched to your mood, with home-screen widgets.</p>
-          <span class="meta">Health &amp; Fitness · iOS</span>
-        </a>
-        <a class="card" href="https://apps.apple.com/app/id6744692370" target="_blank" rel="noopener">
-          <img class="app-icon" src="assets/icon-28c498.jpg" alt="">
-          <h3>PetMorph AI</h3>
-          <p>Turns photos of your pet into portraits, avatars and anime-style art.</p>
-          <span class="meta">Photo &amp; Video · iOS</span>
-        </a>
+      <div class="principles">
+        <div><h3>Private by default</h3><p>OCR, recipe matching and clipboard history run on the device. When data has to leave the phone, we send the minimum and name who receives it.</p></div>
+        <div><h3>Works offline</h3><p>Catalogs and sound libraries ship inside the app. Party games, recipes and soundboards work with the WiFi off.</p></div>
+        <div><h3>Built for every language</h3><p>Our larger apps ship in 31 languages, with plural forms and placeholders checked automatically before every release.</p></div>
+        <div><h3>AI where it earns its place</h3><p>Every model is chosen against an eval set, runs behind a server-side quota, and has a graceful fallback when it is unavailable.</p></div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <div class="callout">
-        <p class="eyebrow">How we work</p>
-        <h2>Claude is how a one-person studio ships nine apps</h2>
-        <p>Every repository has its own instructions for Claude Code. A Claude-backed pipeline translates our interfaces into 31 languages, and the next step is moving our in-app language features onto Claude as well. <a href="claude.html">Read the details →</a></p>
+  <section id="stack">
+    <div class="wrap split">
+      <div class="section-head">
+        <p class="eyebrow">Stack</p>
+        <h2>One toolkit, reused across every app</h2>
+        <p>New apps start from our own Expo template, which comes with localization, theming, onboarding, a paywall, server-side quotas and store automation already wired in. That's how a small studio ships at this pace.</p>
+        <p><a href="claude.html">Read how Claude fits into this →</a></p>
+      </div>
+      <ul class="stack-list">
+        <li><b>Apps</b><span>React Native · Expo · TypeScript · Swift / SwiftUI</span></li>
+        <li><b>Backend</b><span>Supabase (Postgres, Edge Functions) · Cloudflare Workers, D1</span></li>
+        <li><b>AI</b><span>Claude API · image models via fal.ai · on-device Vision OCR</span></li>
+        <li><b>Revenue</b><span>RevenueCat · StoreKit · Google Play Billing</span></li>
+        <li><b>Release</b><span>EAS Build · fastlane · store listings in 31 languages</span></li>
+        <li><b>Engineering</b><span>Claude Code in every repository</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="studio">
+    <div class="wrap split">
+      <div class="section-head">
+        <p class="eyebrow">Studio</p>
+        <h2>Founded and run by Muratcan Yusufoğlu</h2>
+      </div>
+      <div class="about">
+        <p>I'm a full-stack and mobile engineer with more than four years of experience shipping production systems in React Native, React and NestJS, from mobile apps and admin panels to event-driven backends.</p>
+        <p>I started MyApps Studio in April 2024 to build my own products. I handle product, design, engineering and growth for each app end to end, and Claude Code is my day-to-day engineering partner.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:contact@myappsco.app">contact@myappsco.app</a>
+          <a class="btn btn-ghost" href="https://github.com/muratcanyusufoglu" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </div>
   </section>
+
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© 2026 MyApps Studio · Muratcan Yusufoğlu</span>
-    <nav>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="index.html"><img class="brand-mark" src="favicon.svg" alt=""> MyApps Studio</a>
+      <p class="muted">An independent app studio in Ankara, Türkiye. Founded in 2024.</p>
+    </div>
+    <div>
+      <h4>Apps</h4>
+      <a href="apps/hairon.html">HairOn</a><a href="apps/milo.html">Milo</a><a href="apps/stirred.html">Stirred</a><a href="apps/whos-imposter.html">Who&#x27;s Imposter?</a><a href="apps/copydeck.html">Copydeck</a><a href="apps/soundboard-pro.html">Soundboard Pro</a><a href="apps/name-generator.html">Name Generator</a><a href="apps/aurora.html">Aurora</a><a href="apps/petmorph.html">PetMorph AI</a>
+    </div>
+    <div>
+      <h4>Studio</h4>
+      <a href="claude.html">How we build</a>
+      <a href="index.html#studio">About</a>
       <a href="https://apps.apple.com/developer/id1682346986" target="_blank" rel="noopener">App Store developer page</a>
-      <a href="claude.html">How we build with Claude</a>
+      <a href="https://github.com/muratcanyusufoglu" target="_blank" rel="noopener">GitHub</a>
       <a href="mailto:contact@myappsco.app">contact@myappsco.app</a>
-    </nav>
+    </div>
   </div>
+  <div class="wrap footer-base muted">© 2026 MyApps Studio · Muratcan Yusufoğlu</div>
 </footer>
 
 </body>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://myappsco.app/sitemap.xml
